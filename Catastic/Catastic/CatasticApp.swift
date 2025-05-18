@@ -11,7 +11,7 @@ import SwiftUI
 struct CatasticApp: App {
     var body: some Scene {
         WindowGroup {
-            CatListView()
+            SplashScreenView()
         }
     }
 }
