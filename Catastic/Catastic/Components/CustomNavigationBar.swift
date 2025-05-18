@@ -24,7 +24,7 @@ struct CustomNavigationBar: View {
                     .clipShape(Circle())
                     .shadow(radius: 2)
             }
-
+            .accessibilityIdentifier("backButton")
             if let title = title {
                 Text(title)
                     .font(.headline)

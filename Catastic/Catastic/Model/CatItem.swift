@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CatItem: Decodable, Identifiable {
+struct CatItem: Codable, Identifiable {
     var id: String
     var tags: [String]
     var mimetype: String

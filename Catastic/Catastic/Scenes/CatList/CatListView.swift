@@ -10,7 +10,11 @@ import SwiftUICore
 import SwiftUI
 
 struct CatListView: View {
-    @StateObject private var viewModel = CatListViewModel()
+    @StateObject private var viewModel: CatListViewModel
+
+    init(viewModel: CatListViewModel = CatListViewModel()) {
+        _viewModel = StateObject(wrappedValue: viewModel)
+    }
     private let columns = [GridItem(.flexible()), GridItem(.flexible())]
 
     var body: some View {

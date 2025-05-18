@@ -13,8 +13,12 @@ class CatListViewModel: ObservableObject {
     @Published var isLoading = false
     @Published var error: String?
 
-    private let service = CatService()
+    private let service: CatService
     private var cancellables = Set<AnyCancellable>()
+
+    init(service: CatService = CatService()) {
+        self.service = service
+    }
 
     func fetchCats() {
         isLoading = true
